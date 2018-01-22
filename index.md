@@ -1,2 +1,0 @@
-[Dynamic Arm Templates Using YML, Object Parameters, and Linked Templates](https://github.com/TerrapinStation/blog/dynamicArmPart1.md)  
-ARM templates can be really hard to read and can easily get out of control if they arent managed (or even when they are). I implemented a few solutions to help mitigate template and parameter files from getting too messy.

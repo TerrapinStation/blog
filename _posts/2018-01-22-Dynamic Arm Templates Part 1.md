@@ -159,12 +159,12 @@ Tags:
   Managed-By: 'Platforms Team'
 ```
 
-I then used [@pscookiemonster](https://twitter.com/pscookiemonster?lang=en)'s [PSDeploy](https://github.com/RamblingCookieMonster/PSDeploy) module to help me figure out how to deserialize my yml file into a powershell hash table. In the PSDeploy module there is a private module called PSYaml (**not** the same as the PSGallery PSYaml module). This was the only module that I could find that would let me deserialize YML straight from a file. I did, however, have to make a minor tweak to get this module to perform correctly.
+I then used [@pscookiemonster](https://twitter.com/pscookiemonster?lang=en)'s [PSDeploy](https://github.com/RamblingCookieMonster/PSDeploy) module to help me figure out how to deserialize my yml file into a powershell hash table. In the PSDeploy module there is a private module called PSYaml (**not** the same as the PSGallery PSYaml module). This was the only module that I could find that would let me deserialize YML straight from a file into a hash table. I did, however, have to make a minor tweak to get this module to perform correctly.
 
-Now that I have a hash table in my build script that houses all of my parameters, I have a lot of flexibility to add or even change values based on any logic that I build. Here is a snippet from one of my scripts to show what that might look like:
+Now that I have a hash table in my build script that houses all of my parameters, I have a lot of flexibility to add or even change values based on any logic that I build. Here is a snippet from a script to show what that might look like:
 
 ```
-    $config = Get-CscConfigFromYaml -Path $ConfigFilePath
+    $config = Get-ConfigFromYaml -Path $ConfigFilePath
 
     # Set optional parameters for ARM template
     $config.Add('buildNumber', $buildNumber)
@@ -185,4 +185,4 @@ Now that I have a hash table in my build script that houses all of my parameters
     New-AzureRmResourceGroupDeployment @armParams
 ```
 
-So now that I have a more manageable process for defining my parameters, I can start to look at how to manage the resources within our ARM templates. [Part 2 coming soon...](https://github.com/TerrapinStation/blog/dynamicArmPart2.md)
+So now that I have a more manageable process for defining my parameters, I can start to look at how to manage the resources within our ARM templates using linked templates and conditional logic. [Part 2 coming soon...](https://github.com/TerrapinStation/blog/dynamicArmPart2.html)

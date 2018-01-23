@@ -159,7 +159,7 @@ Tags:
   Managed-By: 'Platforms Team'
 ```
 
-I then used [@pscookiemonster](https://twitter.com/pscookiemonster?lang=en)'s [PSDeploy](https://github.com/RamblingCookieMonster/PSDeploy) module to help me figure out how to deserialize my yml file into a powershell hash table. In the PSDeploy module there is a private module called PSYaml (**not** the same as the PSGallery PSYaml module). This was the only module that I could find that would let me deserialize YML straight from a file into a hash table. I did, however, have to make a minor tweak to get this module to perform correctly.
+I then used [@pscookiemonster](https://twitter.com/pscookiemonster?lang=en)'s [PSDeploy](https://github.com/RamblingCookieMonster/PSDeploy) module to help me figure out how to deserialize my yml file into a powershell hash table. In the PSDeploy module there is a private module called PSYaml (**not** the same as the PSGallery PSYaml module). This was the only module that I could find that would let me deserialize YML straight from a file into a hash table. I did, however, have to make a minor tweak to get this module to perform correctly. (I will eventually update this article with a community module that I have written or contributed to, to support the functionality I need for dealing with YML files in powershell.)
 
 Now that I have a hash table in my build script that houses all of my parameters, I have a lot of flexibility to add or even change values based on any logic that I build. Here is a snippet from a script to show what that might look like:
 

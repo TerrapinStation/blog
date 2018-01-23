@@ -11,3 +11,12 @@ github_username:  terrapinstation
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
+
+# Default settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true

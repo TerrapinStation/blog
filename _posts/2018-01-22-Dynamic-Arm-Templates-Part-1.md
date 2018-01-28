@@ -185,4 +185,4 @@ Now that I have a hash table in my build script that houses all of my parameters
     New-AzureRmResourceGroupDeployment @armParams
 ```
 
-So now that I have a more manageable process for defining my parameters, I can start to look at how to manage the resources within the ARM templates, using linked templates and conditional logic. [Part 2 coming soon...](https://terrapinstation.github.io/blog/2018/Dynamic-Arm-Templates-Part-2.html)
+So now that I have a more manageable process for defining my parameters, I can start to look at how to manage the resources within the ARM templates, using linked templates and conditional logic. You can learn about all of this in [Part 2](https://terrapinstation.github.io/blog/2018/Dynamic-Arm-Templates-Part-2.html) 

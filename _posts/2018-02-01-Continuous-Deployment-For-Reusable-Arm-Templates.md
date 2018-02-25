@@ -1,2 +1,3 @@
 # Using Pester, VSTS, and Powershell to setup CI/CD for Reusable Arm Templates
+
 Coming soon...

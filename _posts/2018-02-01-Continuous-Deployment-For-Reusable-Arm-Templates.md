@@ -20,7 +20,7 @@ The first line sets the debug preference to `continue` so we can get the debug o
 
 I won't post what the `$output` variable contains here, as it is very verbose, but what we are looking to capture from the output is the HTTP Response. Here is a snippet of what the looks:
 ```
-
+==================================== HTTP RESPONSE ====================================
 Status Code:
 OK
 ```

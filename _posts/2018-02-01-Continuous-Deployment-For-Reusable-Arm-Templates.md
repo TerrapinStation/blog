@@ -1,4 +1,4 @@
-# Setting up CI/CD for Reusable Arm Templates
+# Setting up CI/CD for Reusable Arm Templates using Pester and Powershell
 
 In my previous posts, I went into detail on how to create dynamic arm templates. One of the key features of making your arm templates dynamic is to leverage the use of linked templates. Linked templates allow a team to have a mechanism to update/manage how resources are being created without having to touch every deployment pipeline that deploys similar resources. The perceived downside of this is that if someone was to make an erroneous change to a linked template, then all deploys that reference that linked template will essentially be in an erroneous state. In order to prevent erroneous updates being created against a linked template, I starting using a CI/CD process involving thorough testing and roll-back operations. This blog will go over some examples of how someone can setup some tests and rollback operations for deploying linked templates.
 
